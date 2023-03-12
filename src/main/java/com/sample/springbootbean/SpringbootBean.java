@@ -21,7 +21,10 @@ public class SpringbootBean implements CommandLineRunner {
 
 	@Autowired
 	@Qualifier("BeanTwo")
-	DemoInterface bean;
+	DemoInterface beanTwo;
+
+	@Autowired
+	DemoInterface beanOne;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootBean.class, args);
@@ -31,6 +34,7 @@ public class SpringbootBean implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		foo.print();
 		one.print();
-		bean.print();
+		beanTwo.print();
+		beanOne.print();
 	}
 }
